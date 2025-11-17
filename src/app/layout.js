@@ -1,20 +1,18 @@
-import { Geist, Geist_Mono, Orbitron } from "next/font/google";
+import { Orbitron, Montserrat } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const orbitron = Orbitron({
   variable: "--font-orbitron",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
+
 
 export const metadata = {
   title: "Create Next App",
@@ -25,9 +23,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} antialiased`}
+        className={`${orbitron.variable} ${montserrat.variable} antialiased`}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
