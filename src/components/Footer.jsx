@@ -1,12 +1,19 @@
 import React from 'react';
 import { FaLinkedinIn, FaTwitter, FaFacebookF } from 'react-icons/fa';
+import Image from 'next/image';
+import iconLeft from '../assets/iconleft.png';
+import iconRight from '../assets/iconright.png';
 
 const Footer = () => {
     return (
         <>
-            <div className='bg-linear-to-r from-orange-800 to-orange-300 h-px absolute top-40 left-0 w-full z-0'>
-            </div>
-            <footer className="container mx-auto pt-50 pb-10 px-30 text-white font-[Montserrat] border border-r border-l-amber-800 border-r-amber-300 border-t-amber-700 border-b-transparent lline-left">
+            <section className='relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-linear-to-r after:from-[#E03609] after:to-[#F0B71F]'>
+            </section>
+            <footer className="container mx-auto pt-25 pb-10 px-30 text-white font-[Montserrat]">
+                <div className='relative '>
+                    <Image className='absolute -top-33 -left-37.5 z-20' src={iconLeft} alt="" />
+                    <Image className='absolute -top-33 -right-37.5 z-20' src={iconRight} alt="" />
+                </div>
                 <div className='flex gap-37.25'>
                     <div>
                         <h2 className="text-[22px] font-semibold font-[Orbitron] pb-7.25">Cyber.AI - Cyber Punk Website</h2>
@@ -56,10 +63,7 @@ const Footer = () => {
                         <div className='flex justify-center items-center border w-10 h-10 rounded-full cursor-pointer hover:bg-amber-500 duration-400 transition'>
                             <FaTwitter />
                         </div>
-
-
                     </div>
-
                 </div>
             </footer>
         </>

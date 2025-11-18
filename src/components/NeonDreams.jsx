@@ -3,14 +3,20 @@ import Image from "next/image";
 import NeonImg1 from '../assets/neon1.png';
 import NeonImg2 from '../assets/neon2.png';
 import NeonImg3 from '../assets/neon3.png';
+import iconLeft from '../assets/iconleft.png';
+import iconRight from '../assets/iconright.png';
 
 
 const NeonDreams = () => {
     return (
-        <section className='container border border-r border-t-amber-800 border-b-amber-300 border-l-transparent border-r-transparent lline-left mx-auto'>
-            <div>
-                <div className="w-[1439.17px] container mx-auto flex justify-center gap-9 font-[Montserrat] pt-19.5">
-                    <div className="w-[50%] px-10 pt-14">
+        <section className='relative border-t-2 border-amber-600 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-linear-to-t after:from-[#E03609] after:to-[#F0B71F]'>
+            <div className='container mx-auto'>
+                <div className='relative'>
+                    <Image className='absolute -top-7.75 -left-7.5 z-20' src={iconLeft} alt="" />
+                    <Image className='absolute -top-7.75 -right-7.5 z-20' src={iconRight} alt="" />
+                </div>
+                <div className="w-[1439.17px] mx-auto flex justify-center gap-9 font-[Montserrat] pt-19.5">
+                    <div className="w-[50%] pt-14">
                         <h2 className="w-171.25 font-bold text-[56.81px] font-[Orbitron]">
                             Where <span className="bg-linear-to-r from-[#E03609] to-[#F0B71F] bg-clip-text text-transparent"> Neon Dreams </span> <span className="bg-linear-to-r from-[#E03609] to-[#F0B71F] bg-clip-text text-transparent"> & Digital </span> Nightmares Converge.
                         </h2>

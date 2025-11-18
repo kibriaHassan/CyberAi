@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
+import iconLeft from '../assets/iconleft.png';
+import iconRight from '../assets/iconright.png';
 
 const Faq = () => {
     return (
         <>
-            <div className="container font-[Montserrat]">
+            <div className="container font-[Montserrat] mx-auto py-12.5">
+                <div className='relative '>
+                    <Image className='absolute -top-20.5 -left-7.5 z-20' src={iconLeft} alt="" />
+                    <Image className='absolute -top-20.5 -right-7.5 z-20' src={iconRight} alt="" />
+                </div>
                 <div>
                     <h2 className="w-210.5 font-bold font-[Orbitron] text-[55px] text-center mx-auto">
                         Frequently Asked <span className="bg-linear-to-r from-[#E03609] to-[#F0B71F] bg-clip-text text-transparent"> Questions </span>

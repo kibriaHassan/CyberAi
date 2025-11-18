@@ -3,12 +3,18 @@ import Image from "next/image";
 import Discover from "../assets/Discover.png";
 import Explore from "../assets/Explore.png";
 import Connected from "../assets/Connected.png";
+import iconLeft from '../assets/iconleft.png';
+import iconRight from '../assets/iconright.png';
 
 
 const UniversePart = () => {
     return (
         <div className="relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-linear-to-r after:from-[#E03609] after:to-[#F0B71F]">
             <div className="container mx-auto font-[Montserrat] pt-37.5 pb-32 px-10">
+                <div className='relative '>
+                    <Image className='absolute -top-45.25 -left-17.5 z-20' src={iconLeft} alt="" />
+                    <Image className='absolute -top-45.25 -right-17.5 z-20' src={iconRight} alt="" />
+                </div>
                 <h1 className="w-210.5 font-bold text-[55px] font-[Orbitron] text-center mx-auto">
                     Dive into the Cybernetic {" "}
                     <span className="bg-linear-to-r from-[#E03609] to-[#F0B71F] bg-clip-text text-transparent">
@@ -74,7 +80,7 @@ const UniversePart = () => {
                     </div>
                 </div>
             </div>
-            
+
         </div>
     );
 };
